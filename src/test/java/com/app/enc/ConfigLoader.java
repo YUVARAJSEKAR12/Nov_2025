@@ -6,6 +6,9 @@ import java.util.Properties;
 import org.jasypt.util.text.BasicTextEncryptor;
 
 public class ConfigLoader {
+	
+	
+	//enc tester1
 	 private Properties props;
 
 	    public ConfigLoader(String propFilePath) throws Exception {
