@@ -8,7 +8,9 @@ import io.restassured.response.Response;
 
 public class RestClient {
 
-	//testone
+	public static void test1(){
+		System.out.println("testone");
+	}
 	
     static {
         // Base URI configured once
