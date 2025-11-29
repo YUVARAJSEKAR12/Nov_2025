@@ -7,6 +7,13 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
 public class RestClient {
+	
+
+    static {
+        // Base URI configured once
+        RestAssured.baseURI = "https://rahulshettyacademy.com";
+    }
+
 
     static {
         // Base URI configured once
