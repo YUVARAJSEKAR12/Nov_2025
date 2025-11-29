@@ -48,4 +48,14 @@ public class RestClient {
                 .when()
                     .get(endpoint);
     }
+    
+ // Common reusable GET method
+    public static Response getRequest1(String endpoint, String queryParamKey, String queryParamValue) {
+        return RestAssured
+                .given()
+                    .queryParam(queryParamKey, queryParamValue)
+                    .contentType(ContentType.JSON)
+                .when()
+                    .get(endpoint);
+    }
 }
