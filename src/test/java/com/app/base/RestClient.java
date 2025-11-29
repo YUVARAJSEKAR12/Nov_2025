@@ -7,12 +7,11 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
 public class RestClient {
-	
- static {
+
+    static {
         // Base URI configured once
         RestAssured.baseURI = "https://rahulshettyacademy.com";
     }
-
     // ---------- POST with OAuth Token ----------
     public static Response postWithOAuth(String endpoint, Object body) {
         String token = OAuthTokenManager.getAccessToken();
@@ -47,4 +46,17 @@ public class RestClient {
                     .get(endpoint);
     }
     
+ // Common reusable GET method
+    public static Response getRequest1(String endpoint, String queryParamKey, String queryParamValue) {
+        return RestAssured
+                .given()
+                    .queryParam(queryParamKey, queryParamValue)
+                    .contentType(ContentType.JSON)
+                .when()
+                    .get(endpoint);
+    }
+	
+		public static void test1(){
+			System.out.println("testone");
+		}
 }
