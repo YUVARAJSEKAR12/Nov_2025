@@ -8,9 +8,6 @@ import io.restassured.response.Response;
 
 public class RestClient {
 
-		public static void test1(){
-			System.out.println("testone");
-		}
     static {
         // Base URI configured once
         RestAssured.baseURI = "https://rahulshettyacademy.com";
@@ -58,4 +55,8 @@ public class RestClient {
                 .when()
                     .get(endpoint);
     }
+	
+		public static void test1(){
+			System.out.println("testone");
+		}
 }
